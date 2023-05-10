@@ -77,6 +77,19 @@ const displayCards = async () => {
     .map(pokemon => generateCard(pokemon)));
   const cardSection = document.querySelector('.cards');
   cardList.forEach(card => cardSection.innerHTML += card);
+
+  displayShowingStat(pokemonList.length);
+}
+
+const displayShowingStat = (totalPokemon) => {
+  let showing = 0;
+
+  if (currentPage == maxPages)
+    showing = totalPokemon % MAX_POKEMON_PER_PAGE;
+  else
+    showing = Math.min(8, totalPokemon);
+  document.querySelector('.showing-stat').innerHTML =
+    `<h3>Showing ${showing} out of ${totalPokemon} Pokémon:`;
 }
 
 const displayButtons = () => {
@@ -87,16 +100,16 @@ const displayButtons = () => {
 
   if (currentPage != 1)
     document.querySelector('.pagination').innerHTML +=
-      `<button class="nes-btn" id = "first" onclick = "paginate(1)"> First</button>
+      `<button class="nes-btn" id = "first" onclick = "paginate(1)">First</button>
     <button class="nes-btn" id="prev" onclick="paginate(Math.max(1, --currentPage))">Prev</button>`;
 
   for (let i = start; i <= end; i++) {
     document.querySelector('.pagination').innerHTML +=
-      `<button class="nes-btn ${i == currentPage ? 'is-primary' : ''}" onclick = "paginate(${i})" > ${i}</button> `;
+      `<button class="nes-btn ${i == currentPage ? 'is-primary' : ''}" onclick = "paginate(${i})">${i}</button> `;
   }
   if (currentPage != maxPages)
     document.querySelector('.pagination').innerHTML +=
-      `<button class="nes-btn" id = "next" onclick = "paginate(Math.min(maxPages, ++currentPage))" > Next</button>
+      `<button class="nes-btn" id = "next" onclick = "paginate(Math.min(maxPages, ++currentPage))">Next</button>
     <button class="nes-btn" id="last" onclick="paginate(maxPages)">Last</button>`;
 }
 

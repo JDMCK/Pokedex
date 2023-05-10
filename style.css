@@ -1,5 +1,6 @@
 header {
   text-align: center;
+  margin: 1rem;
 }
 
 .cards {
@@ -51,4 +52,9 @@ dialog img {
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.showing-stat {
+  text-align: center;
+  margin: 2rem;
 }
