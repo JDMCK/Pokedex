@@ -1,3 +1,54 @@
-div {
-  max-width: 75vw;
+header {
+  text-align: center;
+}
+
+.cards {
+  margin: auto;
+  width: 70vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.pokecard {
+  margin: auto;
+  padding-left: 0;
+  padding-right: 0;
+  width: 13rem;
+  text-align: center;
+}
+
+.pokecard img {
+  height: 100%;
+}
+
+dialog {
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 25%;
+  font-size: 0.85rem;
+}
+
+dialog ul {
+  text-align: left !important;
+}
+
+dialog img {
+  width: 30%
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.numbered-pagination {
+  display: inline;
+}
+
+.filters {
+  width: 30%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
