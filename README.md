@@ -2,6 +2,8 @@
 
 Welcome to the Pokédex! This simple application allows you to explore information about various Pokémon. The Pokédex is organized into separate pages for each Pokémon, providing you with an intuitive and user-friendly experience.
 
+![pokedex](https://github.com/user-attachments/assets/9c0b89e2-782f-42c5-b5e0-a2bbc2df45f4)
+
 ## Features
 
 - **Pokémon Information**: Clicking on a Pokémon's page will display essential details about it, including its name, type(s), abilities, and basic stats. You can quickly access key information for each Pokémon.
